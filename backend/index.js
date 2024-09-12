@@ -64,7 +64,6 @@ app.get("/users/:id", async (req, res) => {
 // create a user
 app.post("/users", async (req, res) => {
   try {
-    console.log(req);
     const user = await prisma.user.create({
       data: {
         name: req.body.name,
